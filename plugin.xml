@@ -30,10 +30,10 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
         <header-file src="src/ios/FirebaseAnalyticsPlugin.h" />
         <source-file src="src/ios/FirebaseAnalyticsPlugin.m" />
-        <!--
+      
         <framework src="Firebase/Core" type="podspec" spec="~> 4.1"/>
         <framework src="GoogleTagManager" type="podspec" spec="~> 6.0"/>
-        <source-file src="src/ios/container" target-dir="container" /> -->
+         <!-- <source-file src="src/ios/container" target-dir="container" /> -->
     </platform>
 
     <platform name="android">
