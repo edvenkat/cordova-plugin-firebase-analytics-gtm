@@ -33,7 +33,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <!-- <resource-file src="src/ios/TagManagerResources.bundle" /> -->
                
           <!-- <framework src="FirebaseAnalytics" type="podspec" spec="~> 5.1"/> -->
-        <framework src="FirebaseCore" type="podspec" spec="~> 5.6"/>
+        <framework src="Firebase/Core" type="podspec" spec=""/>
          <!-- <framework src="GoogleTagManager" type="podspec" spec="~> 6.0"/> -->
          <!-- <source-file src="src/ios/container" target-dir="container" /> -->
     </platform>
