@@ -34,7 +34,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                
       
         <framework src="Firebase/Core" type="podspec" spec="~> 4.1"/>
-        <framework src="GoogleTagManager" type="podspec" spec="~> 7.0"/>
+        <framework src="GoogleTagManager" type="podspec" spec="~> 7.1"/>
          <!-- <source-file src="src/ios/container" target-dir="container" /> -->
     </platform>
 
