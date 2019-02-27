@@ -30,7 +30,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
         <header-file src="src/ios/FirebaseAnalyticsPlugin.h" />
         <source-file src="src/ios/FirebaseAnalyticsPlugin.m" />
-        <resource-file src="src/ios/TagManagerResources.bundle" />
+        <!-- <resource-file src="src/ios/TagManagerResources.bundle" /> -->
                
       
         <framework src="Firebase/Core" type="podspec" spec="~> 4.1"/>
