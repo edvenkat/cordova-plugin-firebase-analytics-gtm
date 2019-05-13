@@ -42,8 +42,9 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     </platform>
 
     <platform name="android">
-         <preference name="FIREBASE_VERSION" default="11.6.+"/>
+        <!-- <preference name="FIREBASE_VERSION" default="11.6.+"/>
         <!--<preference name="FIREBASE_VERSION" default="11.8.0"/> -->
+                <preference name="FIREBASE_VERSION" default="16.0.0"/>
                
 
         <config-file target="res/xml/config.xml" parent="/*">
