@@ -17,15 +17,15 @@
 - (void)logEvent:(CDVInvokedUrlCommand *)command {
     NSString* name = [command.arguments objectAtIndex:0];
     NSDictionary* parameters = [command.arguments objectAtIndex:1];
-    NSString* method = @"email";
+   // NSString* method = @"email";
    // [FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{kFIRParameterMethod: method}];
-    
+    /*
     [FIRAnalytics logEventWithName:kFIREventSelectContent parameters:@{
         kFIRParameterItemID:@"some_item_id",
         kFIRParameterContentType:@"some_content_type"
     }];
-    
-    //[FIRAnalytics logEventWithName:name parameters:parameters];
+    */
+    [FIRAnalytics logEventWithName:name parameters:parameters];
 
     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
