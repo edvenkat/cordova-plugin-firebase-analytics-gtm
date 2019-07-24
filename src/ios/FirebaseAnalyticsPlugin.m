@@ -20,7 +20,7 @@
     NSString* method = @"email";
     //kFIRParameterMethod 
     //[FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{kFIRParameterSignUpMethod: method}];
-     [FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{kFIRParameterMethod: method}];
+     [FIRAnalytics logEventWithName:kFIREventLogin parameters:@{kFIRParameterMethod: method}];
     //[FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{kFIRParameterMethod: method}];
     /*
     [FIRAnalytics logEventWithName:kFIREventSelectContent parameters:@{
