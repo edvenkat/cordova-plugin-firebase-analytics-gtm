@@ -17,7 +17,7 @@
 - (void)logEvent:(CDVInvokedUrlCommand *)command {
     NSString* name = [command.arguments objectAtIndex:0];
     NSDictionary* parameters = [command.arguments objectAtIndex:1];
-    NSString* method = "email"
+    NSString* method = "email";
     [FIRAnalytics logEventWithName:kFIREventSignUp
                     parameters:@{
                                  kFIRParameterMethod: method
