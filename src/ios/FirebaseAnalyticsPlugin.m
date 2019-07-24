@@ -1,6 +1,6 @@
 #import "FirebaseAnalyticsPlugin.h"
 @import Firebase;
-
+static NSString *const kFIRParameterMethod = @"method";
 
 @implementation FirebaseAnalyticsPlugin
 
