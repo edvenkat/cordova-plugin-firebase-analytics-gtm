@@ -18,7 +18,12 @@
     NSString* name = [command.arguments objectAtIndex:0];
     NSDictionary* parameters = [command.arguments objectAtIndex:1];
     NSString* method = @"email";
-    [FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{kFIRParameterMethod: method}];
+   // [FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{kFIRParameterMethod: method}];
+    
+    [FIRAnalytics logEventWithName:kFIREventSelectContent parameters:@{
+        kFIRParameterItemID:@"some_item_id",
+        kFIRParameterContentType:@"some_content_type"
+    }];
     
     //[FIRAnalytics logEventWithName:name parameters:parameters];
 
