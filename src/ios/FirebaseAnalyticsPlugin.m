@@ -20,7 +20,7 @@ static NSString *const kFIRParameterMethod = @"method";
     NSString* method = @"email";
     //kFIRParameterMethod 
     //[FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{kFIRParameterSignUpMethod: method}];
-     [FIRAnalytics logEventWithName:kFIREventLogin parameters:@{kFIRParameterMethod: method}];
+   //  [FIRAnalytics logEventWithName:kFIREventLogin parameters:@{kFIRParameterMethod: method}];
     //[FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{kFIRParameterMethod: method}];
     /*
     [FIRAnalytics logEventWithName:kFIREventSelectContent parameters:@{
@@ -28,7 +28,18 @@ static NSString *const kFIRParameterMethod = @"method";
         kFIRParameterContentType:@"some_content_type"
     }];
     */
-    [FIRAnalytics logEventWithName:name parameters:parameters];
+    //[FIRAnalytics logEventWithName:name parameters:parameters];
+    if([name isEqualToString:@"sign_up"]) {
+        [FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{
+            kFIRParameterSignUpMethod: [parameters valueForKey:@"method"]
+        }];
+    } else if([name isEqualToString:@"login"]) {
+        [FIRAnalytics logEventWithName:kFIREventLogin parameters:@{
+            kFIRParameterMethod: [parameters valueForKey:@"method"]
+        }];
+    } else {
+        [FIRAnalytics logEventWithName:name parameters:parameters];
+    }
 
     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
