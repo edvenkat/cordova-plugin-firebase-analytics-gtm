@@ -31,11 +31,11 @@ static NSString *const kFIRParameterMethod = @"method";
     //[FIRAnalytics logEventWithName:name parameters:parameters];
     if([name isEqualToString:@"sign_up"]) {
         [FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{
-            kFIRParameterSignUpMethod: [parameters valueForKey:@"method"]
+            kFIRParameterMethod : [parameters valueForKey:@"method"]
         }];
     } else if([name isEqualToString:@"login"]) {
         [FIRAnalytics logEventWithName:kFIREventLogin parameters:@{
-            kFIRParameterMethod: [parameters valueForKey:@"method"]
+            kFIRParameterMethod : [parameters valueForKey:@"method"]
         }];
     } else {
         [FIRAnalytics logEventWithName:name parameters:parameters];
