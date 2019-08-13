@@ -40,9 +40,9 @@ static NSString *const kFIRParameterMethod = @"method";
     } else if([name isEqualToString:@"add_to_wishlist"]) {
         [FIRAnalytics logEventWithName:kFIREventAddToWishlist  parameters:@{
             kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
-			kFIRParameterItemName  : [parameters valueForKey:@"item_name"],
-			kFIRParameterItemLocationID  : [parameters valueForKey:@"item_location_id"],
-			kFIRParameterItemID   : [parameters valueForKey:@"item_id"],
+	    kFIRParameterItemName  : [parameters valueForKey:@"item_name"],
+	    kFIRParameterItemLocationID  : [parameters valueForKey:@"item_location_id"],
+	    kFIRParameterItemID   : [parameters valueForKey:@"item_id"],
         }];
     } else {
         [FIRAnalytics logEventWithName:name parameters:parameters];
