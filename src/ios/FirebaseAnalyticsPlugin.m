@@ -44,6 +44,15 @@ static NSString *const kFIRParameterMethod = @"method";
 	    kFIRParameterItemLocationID  : [parameters valueForKey:@"item_location_id"],
 	    kFIRParameterItemID   : [parameters valueForKey:@"item_id"],
         }];
+    } else if() {
+	[FIRAnalytics logEventWithName:kFIREventAddToCart parameters:@{
+            kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
+            kFIRParameterItemName : [parameters valueForKey:@"item_name"],
+	    kFIRParameterItemLocationID : [parameters valueForKey:@"item_location_id"],
+	    kFIRParameterCurrency  : [parameters valueForKey:@"currency"],
+	    kFIRParameterValue  : [parameters valueForKey:@"value"],
+	    kFIRParameterCoupon : [parameters valueForKey:@"coupon"]
+        }];
     } else {
         [FIRAnalytics logEventWithName:name parameters:parameters];
     }
