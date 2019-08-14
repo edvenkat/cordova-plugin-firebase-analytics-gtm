@@ -37,14 +37,15 @@ static NSString *const kFIRParameterMethod = @"method";
         [FIRAnalytics logEventWithName:kFIREventLogin parameters:@{
             kFIRParameterMethod : [parameters valueForKey:@"method"]
         }];
-    } else if([name isEqualToString:@"add_to_wishlist"]) {
+    } else if([name isEqualToString:@"addtowishlist"]) {
         [FIRAnalytics logEventWithName:kFIREventAddToWishlist  parameters:@{
+	    kFIRParameterQuantity : @"1",
             kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
 	    kFIRParameterItemName  : [parameters valueForKey:@"item_name"],
 	    kFIRParameterItemLocationID  : [parameters valueForKey:@"item_location_id"],
 	    kFIRParameterItemID   : [parameters valueForKey:@"item_id"],
         }];
-    } else if([name isEqualToString:@"add_to_card"]) {
+    } else if([name isEqualToString:@"addtocart"]) {
 	[FIRAnalytics logEventWithName:kFIREventAddToCart parameters:@{
             kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
             kFIRParameterItemName : [parameters valueForKey:@"item_name"],
@@ -53,7 +54,7 @@ static NSString *const kFIRParameterMethod = @"method";
 	    kFIRParameterValue  : [parameters valueForKey:@"value"],
 	    kFIRParameterCoupon : [parameters valueForKey:@"coupon"]
         }];
-    } else if([name isEqualToString:@"ecommerce_purchase"]) {
+    } else if([name isEqualToString:@"ecommercepurchase"]) {
     	[FIRAnalytics logEventWithName:kFIREventEcommercePurchase  parameters:@{
             kFIRParameterCoupon : [parameters valueForKey:@"coupon"],
 	    kFIRParameterCurrency   : [parameters valueForKey:@"currency"],
@@ -63,7 +64,7 @@ static NSString *const kFIRParameterMethod = @"method";
 	    kFIRParameterItemName    : [parameters valueForKey:@"item_name"],
         }];
     } else {
-        [FIRAnalytics logEventWithName:name parameters:parameters];
+       // [FIRAnalytics logEventWithName:name parameters:parameters];
     }
 
     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
