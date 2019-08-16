@@ -39,7 +39,7 @@ static NSString *const kFIRParameterMethod = @"method";
         }];
     } else if([name isEqualToString:@"addtowishlist"]) {
         [FIRAnalytics logEventWithName:kFIREventAddToWishlist  parameters:@{
-	    kFIRParameterQuantity : @"1",
+	    kFIRParameterQuantity : [parameters valueForKey:@"quantity"],
             kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
 	    kFIRParameterItemName  : [parameters valueForKey:@"item_name"],
 	    kFIRParameterItemLocationID  : [parameters valueForKey:@"item_location_id"],
@@ -47,6 +47,8 @@ static NSString *const kFIRParameterMethod = @"method";
         }];
     } else if([name isEqualToString:@"addtocart"]) {
 	[FIRAnalytics logEventWithName:kFIREventAddToCart parameters:@{
+	    kFIRParameterItemID   : [parameters valueForKey:@"item_id"],
+	    kFIRParameterQuantity : [parameters valueForKey:@"quantity"],
             kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
             kFIRParameterItemName : [parameters valueForKey:@"item_name"],
 	    kFIRParameterItemLocationID : [parameters valueForKey:@"item_location_id"],
