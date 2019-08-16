@@ -60,35 +60,35 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
     private void logEvent(CallbackContext callbackContext, String name, JSONObject params) throws JSONException {
         Bundle bundle = new Bundle();
         if(name.equalsIgnoreCase("sign_up")) {
-            bundle.putString(Param.METHOD, params.get("method").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.METHOD, params.get("method").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SIGN_UP, bundle);
         } else if(name.equalsIgnoreCase("login")) {
-            bundle.putString(Param.METHOD, params.get("method").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.METHOD, params.get("method").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.LOGIN, bundle);
         } else if(name.equalsIgnoreCase("addtowishlist")) {
-            bundle.putString(Param.ITEM_ID, params.get("item_id").toString());
-            bundle.putString(Param.ITEM_NAME, params.get("item_name").toString());
-            bundle.putString(Param.ITEM_CATEGORY, params.get("item_category").toString());
-            bundle.putString(Param.QUANTITY, ((Number) params.get("quantity")).floatValue());
-            bundle.putString(Param.ITEM_LOCATION_ID, params.get("item_location_id").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.ITEM_ID, params.get("item_id").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.ITEM_NAME, params.get("item_name").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.ITEM_CATEGORY, params.get("item_category").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.QUANTITY, ((Number) params.get("quantity")).floatValue());
+            bundle.putString(this.FirebaseAnalytics.Param.ITEM_LOCATION_ID, params.get("item_location_id").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.ADD_TO_WISHLIST, bundle);
         } else if(name.equalsIgnoreCase("addtocart")) {
-            bundle.putString(Param.ITEM_ID, params.get("item_id").toString());
-            bundle.putString(Param.ITEM_NAME, params.get("item_name").toString());
-            bundle.putString(Param.ITEM_CATEGORY, params.get("item_category").toString());
-            bundle.putString(Param.QUANTITY, ((Number) params.get("quantity")).floatValue());
-            bundle.putString(Param.ITEM_LOCATION_ID, params.get("item_location_id").toString());
-            bundle.putString(Param.CURRENCY, params.get("currency").toString());
-            bundle.putString(Param.VALUE, ((Number) params.get("value")).floatValue());
-            bundle.putString(Param.COUPON, params.get("coupon").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.ITEM_ID, params.get("item_id").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.ITEM_NAME, params.get("item_name").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.ITEM_CATEGORY, params.get("item_category").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.QUANTITY, ((Number) params.get("quantity")).floatValue());
+            bundle.putString(this.FirebaseAnalytics.Param.ITEM_LOCATION_ID, params.get("item_location_id").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.CURRENCY, params.get("currency").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.VALUE, ((Number) params.get("value")).floatValue());
+            bundle.putString(this.FirebaseAnalytics.Param.COUPON, params.get("coupon").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.ADD_TO_CART, bundle);
         }  else if(name.equalsIgnoreCase("ecommercepurchase")) {
-            bundle.putString(Param.COUPON, params.get("coupon").toString());
-            bundle.putString(Param.CURRENCY, params.get("currency").toString());
-            bundle.putString(Param.VALUE,((Number) params.get("value")).floatValue());
-            bundle.putString(Param.TRANSACTION_ID, params.get("transaction_id").toString());
-            bundle.putString(Param.LOCATION, params.get("location").toString());
-            bundle.putString(Param.ITEM_NAME, params.get("item_name").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.COUPON, params.get("coupon").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.CURRENCY, params.get("currency").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.VALUE,((Number) params.get("value")).floatValue());
+            bundle.putString(this.FirebaseAnalytics.Param.TRANSACTION_ID, params.get("transaction_id").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.LOCATION, params.get("location").toString());
+            bundle.putString(this.FirebaseAnalytics.Param.ITEM_NAME, params.get("item_name").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.ECOMMERCE_PURCHASE, bundle);
         } else {
            /* Iterator iter = params.keys();
