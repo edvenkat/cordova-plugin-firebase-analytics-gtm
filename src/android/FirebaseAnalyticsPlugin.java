@@ -62,7 +62,7 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
         if(name.equalsIgnoreCase("sign_up")) {
             bundle.putString(Param.METHOD, params.get("method").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SIGN_UP, bundle);
-        } else if(name.equalsIgnoreCase("login") {
+        } else if(name.equalsIgnoreCase("login")) {
             bundle.putString(Param.METHOD, params.get("method").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.LOGIN, bundle);
         } else if(name.equalsIgnoreCase("addtowishlist")) {
