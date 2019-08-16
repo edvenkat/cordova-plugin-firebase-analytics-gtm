@@ -37,7 +37,7 @@ static NSString *const kFIRParameterMethod = @"method";
         [FIRAnalytics logEventWithName:kFIREventLogin parameters:@{
             kFIRParameterMethod : [parameters valueForKey:@"method"]
         }];
-    } else if([name isEqualToString:@"addtowishlist"]) {
+    } else if([name isEqualToString:@"addtowishlist"]) { 
         [FIRAnalytics logEventWithName:kFIREventAddToWishlist  parameters:@{
 	    kFIRParameterQuantity : [parameters valueForKey:@"quantity"],
             kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
