@@ -80,7 +80,7 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
             bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, params.get("item_name").toString());
             bundle.putString(FirebaseAnalytics.Param.ITEM_CATEGORY, params.get("item_category").toString());
             //bundle.putFloat(FirebaseAnalytics.Param.QUANTITY, ((Number) params.get("quantity")).floatValue());
-            bundle.putLong(FirebaseAnalytics.Param.QUANTITY, ((Long) params.get("quantity")).floatValue());
+            bundle.putLong(FirebaseAnalytics.Param.QUANTITY, ((Long) params.get("quantity")).longValue());
             //bundle.putLong(FirebaseAnalytics.Param.QUANTITY, 1);
             bundle.putString(FirebaseAnalytics.Param.ITEM_LOCATION_ID, params.get("item_location_id").toString());
             bundle.putString(FirebaseAnalytics.Param.CURRENCY, params.get("currency").toString());
