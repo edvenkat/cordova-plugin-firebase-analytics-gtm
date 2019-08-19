@@ -70,7 +70,8 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
             bundle.putString(FirebaseAnalytics.Param.ITEM_ID, params.get("item_id").toString());
             bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, params.get("item_name").toString());
             bundle.putString(FirebaseAnalytics.Param.ITEM_CATEGORY, params.get("item_category").toString());
-            bundle.putFloat(FirebaseAnalytics.Param.QUANTITY, ((Number) quantity).floatValue());
+            //bundle.putFloat(FirebaseAnalytics.Param.QUANTITY, ((Number) quantity).floatValue());
+            bundle.putLong(FirebaseAnalytics.Param.QUANTITY, ((Long) quantity).longValue());
             bundle.putString(FirebaseAnalytics.Param.ITEM_LOCATION_ID, params.get("item_location_id").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.ADD_TO_WISHLIST, bundle);
         } else if(name.equals("addtocart")) {
