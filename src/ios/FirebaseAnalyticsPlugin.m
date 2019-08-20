@@ -39,22 +39,22 @@ static NSString *const kFIRParameterMethod = @"method";
         }];
     } else if([name isEqualToString:@"addtowishlist"]) { 
         [FIRAnalytics logEventWithName:kFIREventAddToWishlist  parameters:@{
-	    kFIRParameterQuantity : [parameters valueForKey:@"quantity"],
-            kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
-	    kFIRParameterItemName  : [parameters valueForKey:@"item_name"],
+	    kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
+    	    kFIRParameterItemName  : [parameters valueForKey:@"item_name"],
 	    kFIRParameterItemLocationID  : [parameters valueForKey:@"item_location_id"],
 	    kFIRParameterItemID   : [parameters valueForKey:@"item_id"],
+	    kFIRParameterQuantity : [parameters valueForKey:@"quantity"],
         }];
     } else if([name isEqualToString:@"addtocart"]) {
 	[FIRAnalytics logEventWithName:kFIREventAddToCart parameters:@{
-	    kFIRParameterItemID   : [parameters valueForKey:@"item_id"],
-	    kFIRParameterQuantity : [parameters valueForKey:@"quantity"],
-            kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
-            kFIRParameterItemName : [parameters valueForKey:@"item_name"],
+	    kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
+	    kFIRParameterItemName : [parameters valueForKey:@"item_name"],
 	    kFIRParameterItemLocationID : [parameters valueForKey:@"item_location_id"],
 	    kFIRParameterCurrency  : [parameters valueForKey:@"currency"],
 	    kFIRParameterValue  : [parameters valueForKey:@"value"],
-	    kFIRParameterCoupon : [parameters valueForKey:@"coupon"]
+	    kFIRParameterCoupon : [parameters valueForKey:@"coupon"],
+	    kFIRParameterItemID   : [parameters valueForKey:@"item_id"],
+	    kFIRParameterQuantity : [parameters valueForKey:@"quantity"],
         }];
     } else if([name isEqualToString:@"ecommercepurchase"]) {
     	[FIRAnalytics logEventWithName:kFIREventEcommercePurchase  parameters:@{
