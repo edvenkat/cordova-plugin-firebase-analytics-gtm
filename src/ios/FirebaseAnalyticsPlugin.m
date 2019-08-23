@@ -33,6 +33,10 @@ static NSString *const kFIRParameterMethod = @"method";
         [FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{
             kFIRParameterMethod : [parameters valueForKey:@"method"]
         }];
+    } else if([name isEqualToString:@"tutorialbegin"]) {
+        [FIRAnalytics logEventWithName:kFIREventTutorialBegin parameters:@{}];
+    } else if([name isEqualToString:@"tutorialcomplete"]) {
+        [FIRAnalytics logEventWithName:kFIREventTutorialComplete parameters:@{}];
     } else if([name isEqualToString:@"login"]) {
         [FIRAnalytics logEventWithName:kFIREventLogin parameters:@{
             kFIRParameterMethod : [parameters valueForKey:@"method"]
@@ -65,6 +69,14 @@ static NSString *const kFIRParameterMethod = @"method";
 	    kFIRParameterLocation    : [parameters valueForKey:@"location"],
 	    kFIRParameterItemName    : [parameters valueForKey:@"item_name"],
         }];
+    } else if([name isEqualToString:@"viewitem"]) {  
+        [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{
+	    kFIRParameterOrigin  : [parameters valueForKey:@"origin"],
+	    kFIRParameterItemID    : [parameters valueForKey:@"item_id"],
+	    kFIRParameterItemName    : [parameters valueForKey:@"item_name"],
+	    kFIRParameterItemCategory     : [parameters valueForKey:@"item_category"],
+	    kFIRParameterSearchTerm     : [parameters valueForKey:@"search_term"],
+	}];
     } else {
        // [FIRAnalytics logEventWithName:name parameters:parameters];
     }
