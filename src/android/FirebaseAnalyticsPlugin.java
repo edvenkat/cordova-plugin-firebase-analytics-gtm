@@ -59,7 +59,7 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
 
     private void logEvent(CallbackContext callbackContext, String name, JSONObject params) throws JSONException {
         Bundle bundle = new Bundle();
-        if(name.equals("sign_up")) {
+        if(name.equals("signup")) {
            // bundle.putString(FirebaseAnalytics.Param.METHOD, params.get("method").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SIGN_UP, bundle);
         } else if(name.equals("tutorialbegin")) {
