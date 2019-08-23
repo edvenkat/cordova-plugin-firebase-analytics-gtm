@@ -62,7 +62,13 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
         if(name.equals("sign_up")) {
            // bundle.putString(FirebaseAnalytics.Param.METHOD, params.get("method").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SIGN_UP, bundle);
-        } else if(name.equals("login")) {
+        } else if(name.equals("tutorialbegin")) {
+            //bundle.putString(FirebaseAnalytics.Param.METHOD, params.get("method").toString());
+            this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.TUTORIAL_BEGIN, bundle);
+        } else if(name.equals("tutorialcomplete")) {
+            //bundle.putString(FirebaseAnalytics.Param.METHOD, params.get("method").toString());
+            this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.TUTORIAL_COMPLETE, bundle);
+        }  else if(name.equals("login")) {
             //bundle.putString(FirebaseAnalytics.Param.METHOD, params.get("method").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.LOGIN, bundle);
         } else if(name.equals("addtowishlist")) {
@@ -100,7 +106,15 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
             bundle.putString(FirebaseAnalytics.Param.LOCATION, params.get("location").toString());
             bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, params.get("item_name").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.ECOMMERCE_PURCHASE, bundle);
+        } else if(name.equals("viewitem")) {
+            bundle.putString(FirebaseAnalytics.Param.ORIGIN, params.get("origin").toString());
+            bundle.putString(FirebaseAnalytics.Param.ITEM_ID, params.get("item_id").toString());
+            bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, params.get("item_name").toString());
+            bundle.putString(FirebaseAnalytics.Param.ITEM_CATEGORY, params.get("item_category").toString());
+            bundle.putString(FirebaseAnalytics.Param.SEARCH_TERM, params.get("search_term").toString());
+            this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.VIEW_ITEM, bundle);
         } else {
+            
            /* Iterator iter = params.keys();
 
             while (iter.hasNext()) {
