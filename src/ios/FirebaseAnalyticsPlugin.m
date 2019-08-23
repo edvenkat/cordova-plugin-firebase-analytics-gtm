@@ -31,7 +31,7 @@ static NSString *const kFIRParameterMethod = @"method";
     //[FIRAnalytics logEventWithName:name parameters:parameters];
     if([name isEqualToString:@"sign_up"]) {
         [FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{
-            kFIRParameterMethod : [parameters valueForKey:@"method"]
+            kFIRParameterMethod:[parameters valueForKey:@"method"]
         }];
     } else if([name isEqualToString:@"tutorialbegin"]) {
         [FIRAnalytics logEventWithName:kFIREventTutorialBegin parameters:@{}];
@@ -39,43 +39,43 @@ static NSString *const kFIRParameterMethod = @"method";
         [FIRAnalytics logEventWithName:kFIREventTutorialComplete parameters:@{}];
     } else if([name isEqualToString:@"login"]) {
         [FIRAnalytics logEventWithName:kFIREventLogin parameters:@{
-            kFIRParameterMethod : [parameters valueForKey:@"method"]
+            kFIRParameterMethod:[parameters valueForKey:@"method"]
         }];
     } else if([name isEqualToString:@"addtowishlist"]) { 
-        [FIRAnalytics logEventWithName:kFIREventAddToWishlist  parameters:@{
-	    kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
-    	    kFIRParameterItemName  : [parameters valueForKey:@"item_name"],
-	    kFIRParameterItemLocationID  : [parameters valueForKey:@"item_location_id"],
-	    kFIRParameterItemID   : [parameters valueForKey:@"item_id"],
-	    kFIRParameterQuantity : [parameters valueForKey:@"quantity"],
+        [FIRAnalytics logEventWithName:kFIREventAddToWishlist parameters:@{
+	    kFIRParameterItemCategory:[parameters valueForKey:@"item_category"],
+    	    kFIRParameterItemName:[parameters valueForKey:@"item_name"],
+	    kFIRParameterItemLocationID:[parameters valueForKey:@"item_location_id"],
+	    kFIRParameterItemID:[parameters valueForKey:@"item_id"],
+	    kFIRParameterQuantity:[parameters valueForKey:@"quantity"]
         }];
     } else if([name isEqualToString:@"addtocart"]) {
 	[FIRAnalytics logEventWithName:kFIREventAddToCart parameters:@{
-	    kFIRParameterItemCategory : [parameters valueForKey:@"item_category"],
-	    kFIRParameterItemName : [parameters valueForKey:@"item_name"],
-	    kFIRParameterItemLocationID : [parameters valueForKey:@"item_location_id"],
-	    kFIRParameterCurrency  : [parameters valueForKey:@"currency"],
-	    kFIRParameterValue  : [parameters valueForKey:@"value"],
-	    kFIRParameterCoupon : [parameters valueForKey:@"coupon"],
-	    kFIRParameterItemID   : [parameters valueForKey:@"item_id"],
-	    kFIRParameterQuantity : [parameters valueForKey:@"quantity"],
+	    kFIRParameterItemCategory:[parameters valueForKey:@"item_category"],
+	    kFIRParameterItemName:[parameters valueForKey:@"item_name"],
+	    kFIRParameterItemLocationID:[parameters valueForKey:@"item_location_id"],
+	    kFIRParameterCurrency:[parameters valueForKey:@"currency"],
+	    kFIRParameterValue:[parameters valueForKey:@"value"],
+	    kFIRParameterCoupon:[parameters valueForKey:@"coupon"],
+	    kFIRParameterItemID:[parameters valueForKey:@"item_id"],
+	    kFIRParameterQuantity:[parameters valueForKey:@"quantity"]
         }];
     } else if([name isEqualToString:@"ecommercepurchase"]) {
-    	[FIRAnalytics logEventWithName:kFIREventEcommercePurchase  parameters:@{
-            kFIRParameterCoupon : [parameters valueForKey:@"coupon"],
-	    kFIRParameterCurrency   : [parameters valueForKey:@"currency"],
-	    kFIRParameterValue   : [parameters valueForKey:@"value"],
-	    kFIRParameterTransactionID    : [parameters valueForKey:@"transaction_id"],
-	    kFIRParameterLocation    : [parameters valueForKey:@"location"],
-	    kFIRParameterItemName    : [parameters valueForKey:@"item_name"],
+    	[FIRAnalytics logEventWithName:kFIREventEcommercePurchase parameters:@{
+            kFIRParameterCoupon:[parameters valueForKey:@"coupon"],
+	    kFIRParameterCurrency:[parameters valueForKey:@"currency"],
+	    kFIRParameterValue:[parameters valueForKey:@"value"],
+	    kFIRParameterTransactionID:[parameters valueForKey:@"transaction_id"],
+	    kFIRParameterLocation:[parameters valueForKey:@"location"],
+	    kFIRParameterItemName:[parameters valueForKey:@"item_name"]
         }];
     } else if([name isEqualToString:@"viewitem"]) {  
         [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{
-	    kFIRParameterOrigin  : [parameters valueForKey:@"origin"],
-	    kFIRParameterItemID    : [parameters valueForKey:@"item_id"],
-	    kFIRParameterItemName    : [parameters valueForKey:@"item_name"],
-	    kFIRParameterItemCategory     : [parameters valueForKey:@"item_category"],
-	    kFIRParameterSearchTerm     : [parameters valueForKey:@"search_term"],
+	    kFIRParameterOrigin:[parameters valueForKey:@"origin"],
+	    kFIRParameterItemID:[parameters valueForKey:@"item_id"],
+	    kFIRParameterItemName:[parameters valueForKey:@"item_name"],
+	    kFIRParameterItemCategory:[parameters valueForKey:@"item_category"],
+	    kFIRParameterSearchTerm:[parameters valueForKey:@"search_term"]
 	}];
     } else {
        // [FIRAnalytics logEventWithName:name parameters:parameters];
