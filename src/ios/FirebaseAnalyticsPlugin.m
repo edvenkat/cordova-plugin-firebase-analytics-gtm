@@ -78,7 +78,7 @@ static NSString *const kFIRParameterMethod = @"method";
 	    kFIRParameterSearchTerm:[parameters valueForKey:@"search_term"]
 	}];
     } else {
-       // [FIRAnalytics logEventWithName:name parameters:parameters];
+       [FIRAnalytics logEventWithName:name parameters:parameters];
     }
 
     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
