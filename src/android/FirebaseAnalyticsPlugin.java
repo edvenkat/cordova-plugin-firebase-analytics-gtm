@@ -115,7 +115,7 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.VIEW_ITEM, bundle);
         } else {
             
-           /* Iterator iter = params.keys();
+            Iterator iter = params.keys();
 
             while (iter.hasNext()) {
                 String key = (String) iter.next();
@@ -128,7 +128,7 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
                 }
             }
 
-            this.firebaseAnalytics.logEvent(name, bundle); */
+            this.firebaseAnalytics.logEvent(name, bundle); 
         }
      
         callbackContext.success();
