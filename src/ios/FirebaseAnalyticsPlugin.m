@@ -30,17 +30,19 @@ static NSString *const kFIRParameterMethod = @"method";
     */
     //[FIRAnalytics logEventWithName:name parameters:parameters];
     if([name isEqualToString:@"signup"]) {
-        [FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{
+        /*[FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{
             kFIRParameterMethod:[parameters valueForKey:@"method"]
-        }];
+        }];*/
+	[FIRAnalytics logEventWithName:kFIREventSignUp parameters:@{}];
     } else if([name isEqualToString:@"tutorialbegin"]) {
         [FIRAnalytics logEventWithName:kFIREventTutorialBegin parameters:@{}];
     } else if([name isEqualToString:@"tutorialcomplete"]) {
         [FIRAnalytics logEventWithName:kFIREventTutorialComplete parameters:@{}];
     } else if([name isEqualToString:@"login"]) {
-        [FIRAnalytics logEventWithName:kFIREventLogin parameters:@{
+        /*[FIRAnalytics logEventWithName:kFIREventLogin parameters:@{
             kFIRParameterMethod:[parameters valueForKey:@"method"]
-        }];
+        }];*/
+	[FIRAnalytics logEventWithName:kFIREventLogin parameters:@{}];
     } else if([name isEqualToString:@"addtowishlist"]) { 
         [FIRAnalytics logEventWithName:kFIREventAddToWishlist parameters:@{
 	    kFIRParameterItemCategory:[parameters valueForKey:@"item_category"],
