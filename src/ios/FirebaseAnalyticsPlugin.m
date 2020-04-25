@@ -61,7 +61,8 @@ static NSString *const kFIRParameterMethod = @"method";
 	    kFIRParameterValue:[parameters valueForKey:@"value"],
 	    kFIRParameterCoupon:[parameters valueForKey:@"coupon"],
 	    kFIRParameterItemID:[parameters valueForKey:@"item_id"],
-	    kFIRParameterQuantity:[parameters valueForKey:@"quantity"]
+	    kFIRParameterQuantity:[parameters valueForKey:@"quantity"],
+	    @"interaction_pagename":[parameters valueForKey:@"interaction_pagename"]
         }];
     } else if([name isEqualToString:@"ecommercepurchase"]) {
     	[FIRAnalytics logEventWithName:kFIREventEcommercePurchase parameters:@{
@@ -70,7 +71,8 @@ static NSString *const kFIRParameterMethod = @"method";
 	    kFIRParameterValue:[parameters valueForKey:@"value"],
 	    kFIRParameterTransactionID:[parameters valueForKey:@"transaction_id"],
 	    kFIRParameterLocation:[parameters valueForKey:@"location"],
-	    kFIRParameterItemName:[parameters valueForKey:@"item_name"]
+	    kFIRParameterItemName:[parameters valueForKey:@"item_name"],
+	    @"interaction_pagename":[parameters valueForKey:@"interaction_pagename"]
         }];
     } else if([name isEqualToString:@"viewitem"]) {  
         [FIRAnalytics logEventWithName:kFIREventViewItem parameters:@{
