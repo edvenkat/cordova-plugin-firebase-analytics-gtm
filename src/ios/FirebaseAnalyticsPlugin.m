@@ -50,7 +50,7 @@ static NSString *const kFIRParameterMethod = @"method";
 	    kFIRParameterItemLocationID:[parameters valueForKey:@"item_location_id"],
 	    kFIRParameterItemID:[parameters valueForKey:@"item_id"],
 	    kFIRParameterQuantity:[parameters valueForKey:@"quantity"],
-	    "interaction_pagename":[parameters valueForKey:@"interaction_pagename"]
+	    @"interaction_pagename":[parameters valueForKey:@"interaction_pagename"]
         }];
     } else if([name isEqualToString:@"addtocart"]) {
 	[FIRAnalytics logEventWithName:kFIREventAddToCart parameters:@{
