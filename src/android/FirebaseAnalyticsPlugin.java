@@ -93,6 +93,7 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
             bundle.putString(FirebaseAnalytics.Param.COUPON, params.get("coupon").toString());
             bundle.putString(FirebaseAnalytics.Param.ITEM_ID, params.get("item_id").toString());
             bundle.putLong(FirebaseAnalytics.Param.QUANTITY, ((Number) params.get("quantity")).longValue());
+            bundle.putString("interaction_pagename", params.get("interaction_pagename").toString());
             
             //bundle.putFloat(FirebaseAnalytics.Param.QUANTITY, ((Number) params.get("quantity")).floatValue());
             
@@ -106,6 +107,7 @@ public class FirebaseAnalyticsPlugin extends CordovaPlugin {
             bundle.putString(FirebaseAnalytics.Param.TRANSACTION_ID, params.get("transaction_id").toString());
             bundle.putString(FirebaseAnalytics.Param.LOCATION, params.get("location").toString());
             bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, params.get("item_name").toString());
+            bundle.putString("interaction_pagename", params.get("interaction_pagename").toString());
             this.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.ECOMMERCE_PURCHASE, bundle);
         } else if(name.equals("viewitem")) {
             bundle.putString(FirebaseAnalytics.Param.ORIGIN, params.get("origin").toString());
